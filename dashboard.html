@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>QuickAid-Dashboard</title>
+</head>
+<body>
+
+    <header class="nav-header observer">
+        <nav class="navbar container">
+            <a href="#" class="navbar__logo navigation-link">QuickAid</a>
+            <ul class="navbar__links" id="navbar__links">
+                <li class="navbar__items"><a href="#" >Max Mustermann</a></li>
+                <li class="navbar__items"><a href="#" >Logout  <i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+            
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Action Choice -->
+    
+    <section class="main container observer">
+        <div class="main__heading">
+            <h1>Choose a Category:</h1>
+            <hr>
+        </div>
+        <div class="main__category-options">
+
+            <a href="#" class="category-link">
+                <div class="category-option">
+                    <i class="fas fa-ambulance"></i>
+                    <p>Add Emergency</p>
+                </div>
+            </a>
+
+            <a href="#" class="category-link">
+                <div class="category-option">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>Volunteer Table</p>
+                </div>
+            </a>
+
+            <a href="./addUser.html" class="category-link">
+                <div class="category-option">
+                    <i class="fas fa-user-plus"></i>
+                    <p>Add Volunteer</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+
+    <script src="./js/dashboard.js"> </script>
+</body>
+</html>
