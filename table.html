@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/table.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>QuickAid-Table</title>
+</head>
+<body>
+    <header class="nav-header observer">
+        <nav class="navbar container">
+            <a href="./dashboard.html" class="navbar__logo navigation-link">QuickAid</a>
+            <ul class="navbar__links" id="navbar__links">
+                <li class="navbar__items"><a href="#" >Max Mustermann</a></li>
+                <li class="navbar__items"><a href="#" >Logout  <i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+            
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+
+    <section class="main container">
+
+        <div class="search-parameter">
+            <div class="search-area">
+                <i class="fas fa-search"></i>
+                <input class="search" id="search" type="search" maxlength="30" placeholder="Search">
+            </div>
+
+        </div>
+
+        <div class="table-content">
+            <table class="table" id="table">
+                <thead>
+                    <tr>
+                        <th>
+                            First Name
+                            <div class="sort">
+                               <div class="sort__arrow">
+                                    <i class="fas fa-sort-up"></i>
+                                    <i class="fas fa-sort-down"></i>
+                               </div>
+                            </div>
+                        </th>
+                        <th>
+                            Last Name
+                            <div class="sort">
+                                <div class="sort__arrow">
+                                     <i class="fas fa-sort-up"></i>
+                                     <i class="fas fa-sort-down"></i>
+                                </div>
+                             </div>
+                        </th>
+                        <th>
+                            Address
+                            <div class="sort">
+                                <div class="sort__arrow">
+                                     <i class="fas fa-sort-up"></i>
+                                     <i class="fas fa-sort-down"></i>
+                                </div>
+                             </div>
+                        </th>
+                        <th>
+                            City
+                            <div class="sort">
+                                <div class="sort__arrow">
+                                     <i class="fas fa-sort-up"></i>
+                                     <i class="fas fa-sort-down"></i>
+                                </div>
+                             </div>
+                        </th>
+                        <th>
+                            Phone
+                            <div class="sort">
+                                <div class="sort__arrow">
+                                     <i class="fas fa-sort-up"></i>
+                                     <i class="fas fa-sort-down"></i>
+                                </div>
+                             </div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr class="table-row">
+                        <td data-label="First Name">
+                            <div class="td">
+                                Manuel
+                            </div>
+                        </td>
+                        <td data-label="Last Name">
+                            <div class="td">
+                                Ferreira Castro
+                            </div>
+                        </td>
+                        <td data-label="Address">
+                            <div class="td">
+                                Rua do Couto 3B
+                            </div>
+                        </td>
+                        <td data-label="City">
+                            <div class="td">
+                                Gabu
+                            </div>
+                        </td>
+                        <td data-label="Phone">
+                            <div class="td">
+                                955587685
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td data-label="First Name">
+                            <div class="td">
+                                Antonio Luis
+                            </div>
+                        </td>
+                        <td data-label="Last Name">
+                            <div class="td">
+                                Calisto de Souza
+                            </div>
+                        </td>
+                        <td data-label="Address">
+                            <div class="td">
+                                Rua do bom Jardim 5A
+                            </div>
+                        </td>
+                        <td data-label="City">
+                            <div class="td">
+                                Gabu
+                            </div>
+                        </td>
+                        <td data-label="Phone">
+                            <div class="td">
+                                955721477
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td data-label="First Name">
+                            <div class="td">
+                                Laura Araujo Pastrana
+                            </div>
+                        </td>
+                        <td data-label="Last Name">
+                            <div class="td">
+                                Souza Ribeiro Pais
+                            </div>
+                        </td>
+                        <td data-label="Address">
+                            <div class="td">
+                                Rua da Santarém 2
+                            </div>
+                        </td>
+                        <td data-label="City">
+                            <div class="td">
+                                Gabu
+                            </div>
+                        </td>
+                        <td data-label="Phone">
+                            <div class="td">
+                                966605942
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td data-label="First Name">
+                            <div class="td">
+                                Caetano Pedro
+                            </div>
+                        </td>
+                        <td data-label="Last Name">
+                            <div class="td">
+                                Mendes Paiva
+                            </div>
+                        </td>
+                        <td data-label="Address">
+                            <div class="td">
+                                Rua do Douro 2
+                            </div>
+                        </td>
+                        <td data-label="City">
+                            <div class="td">
+                                Bafata
+                            </div>
+                        </td>
+                        <td data-label="Phone">
+                            <div class="td">
+                                95504752
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td data-label="First Name">
+                            <div class="td">
+                                Felipe
+                            </div>
+                        </td>
+                        <td data-label="Last Name">
+                            <div class="td">
+                                Couto
+                            </div>
+                        </td>
+                        <td data-label="Address">
+                            <div class="td">
+                                Rua Justino Lopes
+                            </div>
+                        </td>
+                        <td data-label="City">
+                            <div class="td">
+                                Bafata
+                            </div>
+                        </td>
+                        <td data-label="Phone">
+                            <div class="td">
+                                966724651
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-row">
+                        <td data-label="First Name">
+                            <div class="td">
+                                Irene
+                            </div>
+                        </td>
+                        <td data-label="Last Name">
+                            <div class="td">
+                                Cá
+                            </div>
+                        </td>
+                        <td data-label="Address">
+                            <div class="td">
+                                Avenida Pansao Naisna
+                            </div>
+                        </td>
+                        <td data-label="City">
+                            <div class="td">
+                                Bissau
+                            </div>
+                        </td>
+                        <td data-label="Phone">
+                            <div class="td">
+                                783561423
+                            </div>
+                        </td>
+                    </tr>
+                   
+                </tbody>
+            </table>
+        </div>
+
+
+    </section>
+
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/table.js"></script>
+</body>
+</html>

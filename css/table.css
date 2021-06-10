@@ -1,0 +1,183 @@
+:root{
+    --clr-primary: #2171A8;
+    --clr-primary-transparent: #2172a8f5;
+    --clr-accent: #38cfd9; 
+    --clr-white: #ffffff;
+    --clr-error: #df0c0c;
+    --clr-sucess: #2cbb53;
+    --ff-main: 'Lato', sans-serif;
+    --ff-secundary: 'Open Sans', sans-serif;
+}
+
+*, 
+*::after, 
+*::before{
+    box-sizing: border-box;
+}
+
+
+
+
+.search-parameter{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 0 3em;
+    width: 100%;
+}
+
+.search-area{
+    position: relative;
+    width: 50%;
+    max-width: 400px;
+}
+
+.search-area i{
+    position: absolute;
+    top: 9px;
+    left: 10px;
+    font-size: 1.1rem;
+}
+
+.search-area i::after{
+    content: " ";
+    margin-left: 5px;
+    border-right: 1px solid rgba(0, 0, 0, 0.123);
+}
+
+
+.search{
+    width: 100%;
+    max-width: 5000px;
+    padding: 10px;
+    text-align: center;
+}
+
+.table{
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 5px;
+}
+
+.table th {
+ font-size: 1.1rem;  
+ letter-spacing: 1px;
+ opacity: 1;
+ padding: 1.5em;
+ vertical-align: bottom;
+
+}
+
+.sort,
+.sort__arrow{
+    display: inline;
+}
+
+
+.sort__arrow{
+    position: relative;
+}
+
+.fa-sort-up{
+    position: absolute;
+    top: 5px;
+}
+.fa-sort-up,
+.fa-sort-down{
+    visibility: hidden;
+}
+
+.fa-sort-up.show,
+.fa-sort-down.show{
+    visibility: visible;
+}
+
+/* 
+    UTILITY CLASS
+ */
+
+  i.fa-sort-up.show{
+     visibility: visible;
+ }
+
+.table td{
+   letter-spacing: .8px;
+   background-color: rgba(218, 218, 218, 0.377);
+   padding: 1.5em;
+   text-align: center;
+   
+}
+
+.table tr{
+    border: 1px solid rgba(20, 20, 20, 0.178)
+}
+
+
+
+
+
+
+/* MEDIA QUERIES */
+
+/*  
+    600     |   phone
+    900     |   tab portrait
+    1200    |   tab landscape
+    1800    |   desktop
+    >       |   big desktop 
+ */
+
+ @media screen and (max-width: 900px){
+
+    .search-parameter{
+        justify-content: center;
+    }
+
+    .search-area{
+        width: 100%;
+    }
+    input{
+        width: 100%;
+        
+    }
+    .table thead{
+        display: none;
+    }
+    
+    .table,
+    .table tbody,
+    .table tr,
+    .table td{
+        display: block;
+        width: 100%;
+    }
+    
+    .table tr{
+        margin: 2.5em 0;
+        border: 1px solid rgba(0, 0, 0, 0.288);
+    }
+    
+    .table td{
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    
+    .table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        text-align: left;
+        vertical-align: bottom;
+    }
+  
+     
+ }
+
+
+
+
+ 
