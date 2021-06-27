@@ -15,7 +15,7 @@ const searchTable = () => {
 
             //get all the tds in a row
             const tds = row.getElementsByTagName("td");
-            
+
             for (let i = 0; i < tds.length; i++) {
 
                 let td = tds[i];
@@ -36,43 +36,20 @@ const searchTable = () => {
 const sortTable = () => {
 
     const tableHeader = document.querySelectorAll("th");
-    let n = 0;
-    let headingIndex;
-    let judge = true;
+
     tableHeader.forEach(header => {
         header.addEventListener('click', function () {
             sortTable(this.cellIndex);
-            
-           
+        })
+    })
 
-            // see if current heading has changed
-            if(judge){
-                headingIndex = this;
-                judge = false;
-                displayArrowDirection(this, n%2);
-                n++;
-            }else if(headingIndex === this){
-                console.log('same heading');
-                displayArrowDirection(this, n%2);
-                n++;
-                //display Arrow direction on the same heading
-            }else if(headingIndex !== this){
-                console.log('different heading');
-                //remove arrow direction on previous heading
-                removeAllArrows(headingIndex);
-                headingIndex = this;
-                displayArrowDirection(this, n%2);
-                n++;
-            }
-            
-            
-        });
-    });
+
+
 
 
     function sortTable(n) {
-        let switching, i, x, y, shouldSwitch;
-        const table = document.getElementById("table");
+        let table, rows, switching, i, x, y, shouldSwitch;
+        table = document.getElementById("table");
         switching = true;
 
         let direction = "asc";
@@ -82,7 +59,7 @@ const sortTable = () => {
         while (switching) {
           // Start by saying: no switching is done:
           switching = false;
-          const rows = table.rows;
+          rows = table.rows;
           /* Loop through all table rows (except the
           first, which contains table headers): */
           for (i = 1; i < (rows.length - 1); i++) {
@@ -98,14 +75,12 @@ const sortTable = () => {
                 if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
                     // If so, mark as a switch and break the loop:
                     shouldSwitch = true;
-                    
                     break;
                   }
             }else{
                 if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
                     // If so, mark as a switch and break the loop:
                     shouldSwitch = true;
-                    
                     break;
                   }
             }
@@ -125,42 +100,6 @@ const sortTable = () => {
           }
         }
       }
-
-
-
-      // Display sorting arrow direction
-
-
-      function displayArrowDirection(header, decision){
-
-        const arrows = header.querySelectorAll("i");
-
-                
-        if(decision===0){
-            arrows[0].classList.add('show');
-            arrows[1].classList.remove('show');
-            
-        }else{
-            arrows[0].classList.remove('show')
-            arrows[1].classList.add('show');
-        }
-        
-               
-      }
-
-
-      //cRemoves all sorting arrows from the previous header!
-
-      function removeAllArrows(previousHeader){
-        prevArrows = previousHeader.querySelectorAll("i");
-
-        prevArrows.forEach(arrow=>{
-            arrow.classList.remove('show');
-        })
-
-        n=0;
-      }
-
     }
 
 

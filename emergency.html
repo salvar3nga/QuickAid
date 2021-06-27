@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/dashboard.css">
+    <link rel="stylesheet" href="./css/emergency.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Emergencies</title>
+</head>
+<body>
+    <header class="nav-header observer">
+        <nav class="navbar container">
+            <a href="./dashboard.html" class="navbar__logo navigation-link">QuickAid</a>
+            <ul class="navbar__links" id="navbar__links">
+                <li class="navbar__items"><a href="#" >Max Mustermann</a></li>
+                <li class="navbar__items"><a href="#" >Logout  <i class="fas fa-sign-out-alt"></i></a></li>
+            </ul>
+            
+            <div class="burger" id="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="emergency-form">
+        <div class="container">
+        
+            <form class="form" id="form" action="">
+
+                <div class="form__emergency-address col-3">
+                    <div class="address">
+                        <label for="address">Address <span class="require">*</span></label>
+                        <input type="text"  id="address" placeholder="Emergency address" name="emergency-address">
+                    </div>
+
+                    <div class="city">
+                        <label for="city">City <span class="require">*</span></label>
+                        <input type="text"  id="city" placeholder="Emergency city" name="emergency-city">
+                    </div>
+
+                    <div class="form__people-involved">
+                        <label for="people">People involved <span class="require">*</span> </label>
+                        <input type="number"  id="people" placeholder="Nr. people involved" min="1" max="4" name="people-involved" >
+                    </div>
+                </div>
+
+
+                
+                <div class="form__description">
+                    <label for="description">Emergency descrption <i>(optional)</i></label>
+                    <div class="container-short"><textarea name="emergency-description" id="description" > </textarea></div>
+                </div>
+
+                <div class="form__button-control">
+                    <a class="btn-cancel" href="./dashboard.html">Cancel</a>
+                    <!-- <a class="btn-next" href="./dashboard.html">Next</a> -->
+                    <button class="btn-next"type="submit">Next</button>
+                </div>
+
+            </form>
+        </div>
+
+
+    
+
+
+    </section>
+
+
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/emergency.js"></script>
+</body>
+</html>

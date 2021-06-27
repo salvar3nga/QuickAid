@@ -17,7 +17,6 @@
 
 
 
-
 .search-parameter{
     display: flex;
     justify-content: flex-end;
@@ -64,42 +63,8 @@
  opacity: 1;
  padding: 1.5em;
  vertical-align: bottom;
-    
+
 }
-
-
-
-.sort,
-.sort__arrow{
-    display: inline;
-}
-
-
-.sort__arrow{
-    position: relative;
-}
-
-.fa-sort-up{
-    position: absolute;
-    top: 5px;
-}
-.fa-sort-up,
-.fa-sort-down{
-    visibility: hidden;
-}
-
-.fa-sort-up.show,
-.fa-sort-down.show{
-    visibility: visible;
-}
-
-/* 
-    UTILITY CLASS
- */
-
-  i.fa-sort-up.show{
-     visibility: visible;
- }
 
 .table td{
    letter-spacing: .8px;

@@ -15,12 +15,6 @@
     box-sizing: border-box;
 }
 
-h1,
-h2,
-h3{
-    font-family: var(--ff-main);
-}
-
 body{
     margin: 0;
     background-color: var(--clr-white);
