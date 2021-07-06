@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/dashboard.css">
     <link rel="stylesheet" href="./css/table.css">
+    <link rel="stylesheet" href="./css/addVolunteer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
-    <title>QuickAid-Table</title>
+    <title>Emergency</title>
 </head>
 <body>
     <header class="nav-header observer">
@@ -53,6 +54,8 @@
             </div>
 
         </div>
+
+        
 
         <div class="table-content">
             <table class="table" id="table">
@@ -105,8 +108,12 @@
                         </th>
                     </tr>
                 </thead>
+                <div class="info-field">
+                    <h2>Please Select a volunteer for the area of: <span class="emergency-info" id="emergency-city"> <b>Gabu</b></span></h2>
+                    <h2>Street: <span class="emergency-info" id="emergency-street"> <b>Gabu</b></span></h2>
+                </div>
                 <tbody id="table-body">
-                    <tr class="table-row">
+                    <tr data-href="./dashboard.html" class="table-row">
                         <td data-label="First Name">
                             <div class="td">
                                 Manuel
@@ -241,7 +248,7 @@
                             </div>
                         </td>
                     </tr>
-                    <tr class="table-row">
+                    <tr data-href="././summary.html" class="table-row">
                         <td data-label="First Name">
                             <div class="td">
                                 Irene
@@ -332,5 +339,6 @@
 
     <script src="./js/dashboard.js"></script>
     <script src="./js/table.js"></script>
+    <script src="./js/addVolunteer.js"></script>
 </body>
 </html>

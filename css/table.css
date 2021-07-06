@@ -20,9 +20,13 @@
 
 .search-parameter{
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     margin: 0 0 3em;
     width: 100%;
+}
+
+.display-rows label{
+    font-size: 1.2rem;
 }
 
 .search-area{
@@ -50,6 +54,10 @@
     max-width: 5000px;
     padding: 10px;
     text-align: center;
+}
+
+.table-content{
+    margin: 0 0 5em;
 }
 
 .table{

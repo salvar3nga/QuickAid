@@ -53,7 +53,7 @@ const checkForm = () =>{
 
     function checkRequired(input){
         if(input.value.trim() === '' || input.value == null){
-            console.log("hi");
+            
             showErrorMsg(input, 'is required');
             return false;
         }else{

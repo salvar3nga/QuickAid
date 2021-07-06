@@ -33,6 +33,46 @@ const searchTable = () => {
 
 }
 
+const displayNumebrOfRows = () =>{
+    const selectOption = document.querySelector('select');
+    
+    let oldlValue = selectOption.value;
+    selectOption.addEventListener('click' , action);
+
+    function action(){
+        let currentValue = selectOption.value;
+
+        
+        //Select all rows
+        const rows = document.querySelectorAll('.table-row');
+
+        
+        if(oldlValue !== currentValue && currentValue != "-1"){
+            //update the old value to the current one
+           oldlValue = currentValue;          
+
+           rows.forEach(row=>{
+               row.style.display = "none";
+           })
+
+           for(let i =0; i< currentValue; i++){
+               if(rows[i] === undefined) return;
+               rows[i].style.display="";
+           }
+          
+          
+
+        }else if(oldlValue !== currentValue && currentValue == "-1"){
+            rows.forEach(row=>{
+                row.style.display = "";
+            })
+        }else if(oldlValue === currentValue){
+          
+        }
+    }
+
+};
+
 const sortTable = () => {
 
     const tableHeader = document.querySelectorAll("th");
@@ -51,13 +91,11 @@ const sortTable = () => {
                 judge = false;
                 displayArrowDirection(this, n%2);
                 n++;
-            }else if(headingIndex === this){
-                console.log('same heading');
+            }else if(headingIndex === this){            
                 displayArrowDirection(this, n%2);
                 n++;
                 //display Arrow direction on the same heading
             }else if(headingIndex !== this){
-                console.log('different heading');
                 //remove arrow direction on previous heading
                 removeAllArrows(headingIndex);
                 headingIndex = this;
@@ -169,6 +207,7 @@ const sortTable = () => {
     const main = () => {
         searchTable();
         sortTable();
+        displayNumebrOfRows();
         
     }
 

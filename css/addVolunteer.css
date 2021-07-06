@@ -1,0 +1,31 @@
+:root{
+    --clr-primary: #2171A8;
+    --clr-primary-transparent: #2172a8f5;
+    --clr-accent: #38cfd9; 
+    --clr-white: #ffffff;
+    --clr-error: #df0c0c;
+    --clr-sucess: #2cbb53;
+    --ff-main: 'Lato', sans-serif;
+    --ff-secundary: 'Open Sans', sans-serif;
+}
+h2{
+    font-weight: 400;
+    font-family: var(--ff-main);
+}
+
+tbody tr{
+    cursor: pointer;
+}
+
+tbody tr:hover{
+    background-color: rgba(12, 12, 12, 0.178)
+}
+
+.table{
+    border-spacing: 0 20px;
+}
+
+.emergency-info{
+    color: var(--clr-accent);
+    margin-inline: 5px;
+}
