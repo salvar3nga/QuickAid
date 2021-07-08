@@ -26,8 +26,22 @@ const displaySummaryInformation = ()=>{
 };
 
 
+const checkCancelBtn = () =>{
+    
+    const cancelButton = document.querySelector('.btn-cancel');
+    cancelButton.addEventListener('click', ()=>{
+
+       
+        (confirm("You are about to cancel emergency. Any progress made you will be lost!")) 
+        ? window.location.href = "./emergency.html" : null;
+         
+     })
+}
+
+
 const main = ()=>{
     displaySummaryInformation();
+    checkCancelBtn();
 }
 
 main();

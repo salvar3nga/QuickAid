@@ -33,7 +33,7 @@ const checkForm = () =>{
     
     
     
-
+    // When User clicks the submit button
     form.addEventListener('submit', (evt)=>{
 
         //not the best way but...
@@ -49,7 +49,6 @@ const checkForm = () =>{
         
 
     })
-
 
     function checkRequired(input){
         if(input.value.trim() === '' || input.value == null){
@@ -107,7 +106,45 @@ const checkForm = () =>{
     /*
      TODO:
      Implement confirm if form has some data but user clicks on cancel button 
-     */
+    */
+
+    const cancelButton = form.querySelector('.btn-cancel');
+
+    cancelButton.addEventListener('click', ()=>{
+
+        const inputs = document.querySelectorAll('input');
+        let run = true;
+
+        let answer;
+
+        //check if any input has some value! If so prompt the user!
+        for(let i=0; i<inputs.length; i++){
+            
+            
+            if(inputs[i].value !== "" && run){
+                if(inputs[i].type === "checkbox") continue;
+                answer = confirm("Are you sure you want to cancel? All progress will be lost!");
+                if(answer){
+                    window.location.href = "./dashboard.html";
+                }
+                run = false;
+                return;
+            }
+
+            //otherwise if everything is empty do not prompt
+            if(i==(inputs.length -1) && (answer == undefined)){
+                window.location.href = "./dashboard.html"
+            }
+        }
+
+      
+      
+        
+         
+     })
+
+
+
 }
 
 
